@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--顶部导航栏-->
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--轮播图-->
+            <com.youth.banner.Banner
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="15dp" />
+            <!--滚动公告栏-->
+
+            <com.sunfusheng.marqueeview.MarqueeView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mvTextSize="14sp"
+                />
+            <!--菜单栏-->
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <RadioButton
+                    android:id="@+id/rb_home_project_introduce"
+                    style="@style/home_radiogroup"
+                    android:text="项目介绍"/>
+                <RadioButton
+                    android:id="@+id/rb_home_one_key_deal"
+                    style="@style/home_radiogroup"
+                    android:text="一键买卖"/>
+                <RadioButton
+                    android:id="@+id/rb_home_bit_deal"
+                    style="@style/home_radiogroup"
+                    android:text="币币交易"/>
+                <RadioButton
+                    android:id="@+id/rb_home_bring_lend"
+                    style="@style/home_radiogroup"
+                    android:text="撮合贷款"/>
+            </RadioGroup>
+            <!--列表项-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_home_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+</LinearLayout>

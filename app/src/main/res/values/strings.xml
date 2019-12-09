@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Wallet</string>
+    <string name="title_home">首页</string>
+    <string name="lend">借贷</string>
+    <string name="deal">交易</string>
+    <string name="plan">定投</string>
+    <string name="wallet">钱包</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
