@@ -5,58 +5,90 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <!--顶部导航栏-->
-<!--    <View-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content" />-->
+    <include layout="@layout/tool_bar" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <!--轮播图-->
             <com.youth.banner.Banner
+                android:id="@+id/banner_home"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="170dp"
                 android:layout_margin="15dp" />
             <!--滚动公告栏-->
-
-            <com.sunfusheng.marqueeview.MarqueeView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:mvTextSize="14sp"
-                />
+                android:gravity="center_vertical"
+                android:layout_margin="10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_home_notify_arrow"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/resources_img_im_notice" />
+
+                <com.sunfusheng.marqueeview.MarqueeView
+                    android:id="@+id/mqv_home_notify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/iv_home_notify_arrow"
+                    app:mvTextSize="14sp" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/resources_img_icon_right_arrow"
+                    android:tint="@color/colorPrimaryDark"
+                  />
+            </RelativeLayout>
             <!--菜单栏-->
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <RadioButton
                     android:id="@+id/rb_home_project_introduce"
                     style="@style/home_radiogroup"
-                    android:text="项目介绍"/>
+                    android:drawableTop="@drawable/resources_img_home_iconrrb"
+                    android:text="项目介绍" />
+
                 <RadioButton
                     android:id="@+id/rb_home_one_key_deal"
                     style="@style/home_radiogroup"
-                    android:text="一键买卖"/>
+                    android:drawableTop="@drawable/resources_img_home_iconotc"
+                    android:text="一键买卖" />
+
                 <RadioButton
                     android:id="@+id/rb_home_bit_deal"
                     style="@style/home_radiogroup"
-                    android:text="币币交易"/>
+                    android:drawableTop="@drawable/resources_img_home_iconexchange"
+                    android:text="币币交易" />
+
                 <RadioButton
                     android:id="@+id/rb_home_bring_lend"
                     style="@style/home_radiogroup"
-                    android:text="撮合贷款"/>
+                    android:drawableTop="@drawable/resources_img_home_iconcoinloan"
+                    android:text="撮合贷款" />
             </RadioGroup>
             <!--列表项-->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_home_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:nestedScrollingEnabled="false"/>
+                android:nestedScrollingEnabled="false" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>

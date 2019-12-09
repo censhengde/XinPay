@@ -18,23 +18,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/home"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/resources_img_tab_homeselected"
         android:title="@string/title_home" />
     <item
         android:id="@+id/lend"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/resources_img_tab_loanselected"
         android:title="@string/lend" />
     <item
         android:id="@+id/deal"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/resources_img_tab_tradeselected"
 
         android:title="@string/deal" />
     <item
         android:id="@+id/plan"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/resources_img_tab_xplanselected"
         android:title="@string/plan" />
     <item
         android:id="@+id/wallet"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/resources_img_tab_walletselected"
         android:title="@string/wallet" />
 </menu>
