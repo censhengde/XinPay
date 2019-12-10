@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_cloud_login_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/resources_img_wallet_multisig_default_img"
+        android:drawablePadding="15dp"
+        android:gravity="center"
+        android:text="@string/multisig_wallet_text"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_login_cloud_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cloud_login_default"
+        android:layout_margin="10dp"
+        android:text="私钥存储在本地,与多人共同管理数字资产" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_login_cloud_tip"
+        android:background="#5E6BE5"
+        android:layout_margin="20dp"
+        android:textSize="14sp"
+        android:text="创建多签钱包"
+        android:textColor="#fff" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已有多签钱包?加入钱包 恢复钱包"
+        android:layout_margin="10dp"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

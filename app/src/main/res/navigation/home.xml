@@ -24,9 +24,9 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.ringle_al.wallet.ui.fragment.HomeFragment"
+        android:name="com.ringle.xinpay.ui.fragment.tab.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home">
+        tools:layout="@layout/fragment_tab_home">
         <action
             android:id="@+id/action_title_to_about"
             />

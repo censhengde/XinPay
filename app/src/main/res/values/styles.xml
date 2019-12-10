@@ -20,5 +20,10 @@
         <item name="android:textSize">12sp</item>
         <item name="android:drawablePadding">10dp</item>
     </style>
+    <!--钱包页布局风格-->
+    <style name="wallet_layout_style">
+
+
+    </style>
 
 </resources>

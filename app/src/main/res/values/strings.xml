@@ -9,4 +9,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home_my">我的</string>
+    <string name="login_cloud">云钱包</string>
+    <string name="hd_wallet_text">HD钱包</string>
+    <string name="multisig_wallet_text">多签钱包</string>
 </resources>

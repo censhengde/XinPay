@@ -1,16 +1,12 @@
-package com.ringle_al.wallet.ui.fragment
+package com.ringle.xinpay.ui.fragment.tab
 
 import android.content.Context
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.ringle_al.common.base.BaseFragment
 import com.ringle_al.wallet.R
 import com.youth.banner.loader.ImageLoader
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_tab_home.*
 
 /**
  *create by 岑胜德
@@ -19,7 +15,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
  *
  */
 class HomeFragment : BaseFragment() {
-    override fun setContentView(): Int = R.layout.fragment_home
+    override fun setContentView(): Int = R.layout.fragment_tab_home
 //    private val mAdapter=
 
 

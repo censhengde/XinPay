@@ -1,4 +1,4 @@
-package com.ringle_al.wallet.data
+package com.ringle.xinpay.data
 
 /**
  * create by 岑胜德

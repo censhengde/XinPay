@@ -1,14 +1,13 @@
-package com.ringle_al.wallet.ui.activity
+package com.ringle.xinpay.ui.activity
 
 import android.os.Bundle
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
 import androidx.navigation.NavController
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.ringle_al.common.base.BaseActivity
 import com.ringle_al.wallet.R
-import com.ringle_al.wallet.setupWithNavController
+import com.ringle.xinpay.setupWithNavController
+import kotlinx.android.synthetic.main.activity_main_nav_host.*
 
 
 class MainActivity : BaseActivity() {
@@ -22,6 +21,9 @@ class MainActivity : BaseActivity() {
         if (savedInstanceState == null) {
             setupBottomNavigationBar()
         } // Else, need to wait for onRestoreInstanceState
+
+        //禁用默认着色
+        bottom_nav.itemIconTintList=null
 
     }
 

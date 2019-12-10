@@ -28,8 +28,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:foregroundTint="@color/colorPrimaryDark"
-        android:foregroundTintMode="src_in"
+        android:tint="#1D1818"
+        app:tintMode="src_over"
         android:src="@drawable/resources_img_mine_mine_message"
         />
 
