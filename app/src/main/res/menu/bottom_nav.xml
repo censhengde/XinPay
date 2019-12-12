@@ -20,19 +20,19 @@
         android:id="@+id/home"
         android:icon="@drawable/selector_tab_home"
         android:title="@string/title_home" />
-    <item
-        android:id="@+id/lend"
-        android:icon="@drawable/selector_tab_borrow"
-        android:title="@string/lend" />
+<!--    <item-->
+<!--        android:id="@+id/lend"-->
+<!--        android:icon="@drawable/selector_tab_borrow"-->
+<!--        android:title="@string/lend" />-->
     <item
         android:id="@+id/deal"
         android:icon="@drawable/selector_tab_deal"
 
         android:title="@string/deal" />
-    <item
-        android:id="@+id/plan"
-        android:icon="@drawable/selector_tab_plan"
-        android:title="@string/plan" />
+<!--    <item-->
+<!--        android:id="@+id/plan"-->
+<!--        android:icon="@drawable/selector_tab_plan"-->
+<!--        android:title="@string/plan" />-->
     <item
         android:id="@+id/wallet"
         android:icon="@drawable/selector_tab_wallet"

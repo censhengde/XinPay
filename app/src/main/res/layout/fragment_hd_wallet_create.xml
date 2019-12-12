@@ -37,9 +37,9 @@
 
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_hd_wallet_recover_wallet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="已有HD钱包?恢复钱包"
         android:layout_margin="10dp"/>
 
 

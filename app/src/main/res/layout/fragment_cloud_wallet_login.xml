@@ -37,9 +37,9 @@
 
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_cloud_wallect_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="还没有注册账号?立即去注册"
         android:layout_margin="10dp"/>
 
 

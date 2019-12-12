@@ -31,5 +31,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     testImplementation 'junit:junit:4.12'
+
+    api 'com.github.consenlabs:token-core-android:v0.1'
     api project(path:':base')
 }

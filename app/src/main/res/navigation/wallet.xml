@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019, The Android Open Source Project
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,21 +14,35 @@
   ~ limitations under the License.
   -->
 
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/wallet"
-    app:startDestination="@+id/wallet">
+    app:startDestination="@+id/fragment_tab_wallet">
+    <action android:id="@+id/action_cloud_to_regist"
+        app:destination="@id/fragment_cloud_wallet_regist"/>
 
     <fragment
-        android:id="@+id/wallet"
+        android:id="@+id/fragment_tab_wallet"
         android:name="com.ringle.xinpay.ui.fragment.tab.WalletFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_tab_wallet">
-        <action
-            android:id="@+id/action_title_to_about"
-           />
+        <action android:id="@+id/action_tab_wallet_to_regist"
+            app:destination="@id/fragment_cloud_wallet_regist"/>
+        <action android:id="@+id/action_tab_wallet_to_create_wallet"
+            app:destination="@id/fragment_create_wallet"/>
     </fragment>
+    <fragment
+        android:id="@+id/fragment_cloud_wallet"
+        android:name="com.ringle.xinpay.ui.fragment.wallet.CloudWalletFragment">
 
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_cloud_wallet_regist"
+        android:name="com.ringle.xinpay.ui.fragment.wallet.CloudWalletRegistFragment">
+<!--        <action android:id="@+id/action_cloud_to_regist"/>-->
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_create_wallet"
+        android:name="com.ringle.xinpay.ui.fragment.wallet.CreateWalletFragment"/>
 </navigation>

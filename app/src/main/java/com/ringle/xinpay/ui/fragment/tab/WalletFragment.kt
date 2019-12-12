@@ -10,7 +10,7 @@ import com.ringle.xinpay.ui.fragment.wallet.HDWalletFragment
 import com.ringle.xinpay.ui.fragment.wallet.MultiSigWalletFragment
 import com.ringle_al.common.base.BaseFragment
 
-import com.ringle_al.wallet.R
+import com.ringle.wallet.R
 import kotlinx.android.synthetic.main.fragment_tab_wallet.*
 import org.jetbrains.anko.info
 

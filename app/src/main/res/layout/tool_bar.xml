@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="15dp">
+    android:id="@+id/tool_bar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:gravity="center_vertical">
+
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_home_my"
+        android:id="@+id/tool_bar_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/resources_img_home_default_avatar"
-        android:layout_centerVertical="true"
-        android:gravity="center"
         android:drawablePadding="10dp"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="@string/home_my"/>
+        android:text="我的"
+        android:gravity="center"
+        android:textStyle="bold" />
+
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:tint="@color/colorPrimaryDark"
-        android:src="@drawable/resources_img_home_customerservice"
-        android:layout_toStartOf="@id/ib_home_message"
         android:layout_marginEnd="15dp"
-        />
+        android:layout_toStartOf="@id/ib_home_message"
+        android:src="@drawable/resources_img_home_customerservice"
+        android:tint="@color/colorPrimaryDark" />
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ib_home_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:tint="#1D1818"
-        app:tintMode="src_over"
         android:src="@drawable/resources_img_mine_mine_message"
-        />
+        android:tint="#1D1818"
+        app:tintMode="src_over" />
 
 
 </RelativeLayout>

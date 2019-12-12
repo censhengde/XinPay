@@ -4,7 +4,7 @@ import android.content.Context
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.ringle_al.common.base.BaseFragment
-import com.ringle_al.wallet.R
+import com.ringle.wallet.R
 import com.youth.banner.loader.ImageLoader
 import kotlinx.android.synthetic.main.fragment_tab_home.*
 

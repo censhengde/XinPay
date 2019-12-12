@@ -12,4 +12,5 @@
     <string name="login_cloud">云钱包</string>
     <string name="hd_wallet_text">HD钱包</string>
     <string name="multisig_wallet_text">多签钱包</string>
+    <string name="ctv_is_agreed"><![CDATA[我同意<用户服务协议>]]></string>
 </resources>

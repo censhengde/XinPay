@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import com.ringle_al.wallet.R
+import com.ringle.wallet.R
 
 /**
  * A simple [Fragment] subclass.
