@@ -5,7 +5,7 @@
     xmlns:tool="http://schemas.android.com/apk/res-auto"
 
     android:orientation="vertical"
-    tools:context="com.ringle.xinpay.ui.fragment.wallet.RecoverWalletFragment">
+    tools:context="com.ringle.wallet.ui.RecoverWalletFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"

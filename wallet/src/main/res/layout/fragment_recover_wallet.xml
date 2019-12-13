@@ -1,0 +1,141 @@
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".ui.RecoverWalletFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#fff"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_recover_wallet_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/resources_img_nav_navback"
+            android:tint="@color/colorPrimaryDark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="恢复钱包"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_recover_wallet_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/resources_img_nav_nav_scan"
+            android:tint="@color/colorPrimaryDark" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#228B8585"
+        android:padding="15dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/resources_img_proof_oval"
+            android:drawablePadding="5dp"
+            android:textColor="#7A464040"
+            android:text="密码用于加密保护私钥,以及转账等,所以强度非常重要."/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/resources_img_proof_oval"
+            android:drawablePadding="5dp"
+            android:textColor="#7A464040"
+            android:text="XinPay不存储密码,也无法帮您找回,请务必牢记"/>
+
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_input_mnemonic_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textSize="16sp"
+        android:background="@null"
+        android:textColorHint="#B4B4AEAE"
+        android:hint="请输入助记词,支持英文或汉字,输入英文单词时需用空格间隔"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#228B8585"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="设置密码"
+        android:padding="15dp"
+        android:textSize="16sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#228B8585"/>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_input_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@null"
+        android:padding="15dp"
+        android:textColorHint="#B4B4AEAE"
+        android:textSize="16sp"
+        android:hint="不少于8位包含英文,数字密码"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#228B8585"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="确认密码"
+        android:padding="15dp"
+        android:textSize="16sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#228B8585"/>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@null"
+        android:padding="15dp"
+        android:textColorHint="#B4B4AEAE"
+        android:textSize="16sp"
+        android:hint="确认钱包密码"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#228B8585"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_start_import"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_margin="15dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:text="开始导入"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

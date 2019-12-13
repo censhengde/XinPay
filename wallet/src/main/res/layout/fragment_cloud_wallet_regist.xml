@@ -1,0 +1,22 @@
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.CloudWalletRegistFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/style_action_bar_center_title"
+            android:text="注册" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/style_action_bar_right_icon"
+            android:src="@drawable/resources_img_nav_nav_close" />
+    </RelativeLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

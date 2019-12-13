@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Wallet</string>
+    <string name="ctv_is_agreed"><![CDATA[我同意<<平台服务协议>>]]></string>
+    <string name="hd_wallet_text">HD钱包</string>
+</resources>

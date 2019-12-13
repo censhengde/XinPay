@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_cloud_wallet"
+
+    >
+    <!--去恢复HD钱包-->
+<!--    <action-->
+<!--        android:id="@+id/action_to_hd_wallet_recover"-->
+<!--        app:destination="@id/fragment_hd_wallet_recover" />-->
+<!--    &lt;!&ndash;去创建Hd钱包&ndash;&gt;-->
+<!--    <action-->
+<!--        android:id="@+id/action_to_cloud_wallet_login_frag"-->
+<!--        app:destination="@id/fragment_hd_wallet_default" />-->
+
+<!--    &lt;!&ndash;钱包默认页&ndash;&gt;-->
+<!--    <fragment-->
+<!--        android:id="@+id/fragment_hd_wallet_default"-->
+<!--        android:name="com.ringle.wallet.ui.HDWalletFragment">-->
+
+<!--    </fragment>-->
+<!--    &lt;!&ndash;创建页&ndash;&gt;-->
+<!--    <fragment-->
+<!--        android:id="@+id/fragment_hd_wallet_default"-->
+<!--        android:name="com.ringle.wallet.ui.HDWalletCreateFragment">-->
+
+<!--    </fragment>-->
+<!--    &lt;!&ndash;恢复页&ndash;&gt;-->
+<!--    <fragment-->
+<!--        android:id="@+id/fragment_hd_wallet_recover"-->
+<!--        android:name="com.ringle.wallet.ui.RecoverWalletFragment"></fragment>-->
+</navigation>

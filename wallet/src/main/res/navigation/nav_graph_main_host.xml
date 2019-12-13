@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><!--根容器导航图,承载所有容器-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main_host"
+    app:startDestination="@id/fragment_wallet"
+    tools:ignore="UnusedNavigation">
+    <!--入口-->
+    <fragment
+        android:id="@+id/fragment_wallet"
+        android:name="com.ringle.wallet.ui.WalletFragment">
+
+        <action
+            android:id="@+id/action_to_hd_wallet_recover"
+            app:destination="@id/fragment_hd_wallet_recover" />
+        <!--去创建Hd钱包-->
+        <action
+            android:id="@+id/action_to_hd_wallet_create_frag"
+            app:destination="@id/fragment_hd_wallet_create" />
+    </fragment>
+    <!--==========others===-->
+    <!--创建页-->
+    <fragment
+        android:id="@+id/fragment_hd_wallet_create"
+        android:name="com.ringle.wallet.ui.HDWalletCreateFragment">
+
+    </fragment>
+    <!--恢复页-->
+    <fragment
+        android:id="@+id/fragment_hd_wallet_recover"
+        android:name="com.ringle.wallet.ui.RecoverWalletFragment"></fragment>
+</navigation>
+
