@@ -4,20 +4,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.ringle.base.getFilePath
 import com.ringle_al.common.util.LiveDataBus
 import org.consenlabs.tokencore.wallet.KeystoreStorage
 import org.consenlabs.tokencore.wallet.WalletManager
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
-import org.jetbrains.anko.wallpaperManager
 import java.io.File
 
 class MainActivity : AppCompatActivity(), AnkoLogger, KeystoreStorage {
     /**
      *加载秘钥文件
      */
+//    private val sdcardRoot= getExternalFilesDir("xinpay")?.absolutePath;
     override fun getKeystoreDir(): File {
-        return File("")
+        val path=getFilePath("xinpay")
+        info { "sdcardRoot==$path" }
+        return File(path)
     }
 
     private lateinit var mMainNavControoler: NavController

@@ -3,11 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/pageBackgound"
     tools:context=".ui.HDWalletCreateFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="?attr/actionBarSize"
+        android:background="#fff">
 
         <ImageView
             android:id="@+id/btn_create_wallet_back"
@@ -32,90 +34,60 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#228B8585"
+
         android:orientation="vertical"
         android:padding="15dp">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/resources_img_proof_oval"
-            android:drawablePadding="5dp"
             android:text="密码用于加密保护私钥,以及转账等,所以强度非常重要."
-            android:textColor="#7A464040" />
+            style="@style/HDWalletCreateFragment_explain_text" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/resources_img_proof_oval"
-            android:drawablePadding="5dp"
+            style="@style/HDWalletCreateFragment_explain_text"
             android:text="XinPay不存储密码,也无法帮您找回,请务必牢记"
-            android:textColor="#7A464040" />
+            />
 
     </LinearLayout>
 
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/HDWalletCreateFragment_tv"
         android:layout_marginTop="10dp"
-        android:padding="15dp"
-        android:text="设置密码"
-        android:textSize="16sp" />
+        android:text="设置密码" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#228B8585" />
+
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_input_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/HDWalletCreateFragment_et"
         android:layout_marginTop="1dp"
-        android:background="@null"
         android:hint="不少于8位包含英文,数字密码"
-        android:padding="15dp"
-        android:textColorHint="#B4B4AEAE"
-        android:textSize="16sp" />
+        />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="15dp"
-        android:background="#228B8585" />
+
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/HDWalletCreateFragment_tv"
         android:layout_marginTop="10dp"
-        android:padding="15dp"
         android:text="确认密码"
-        android:textSize="16sp" />
+         />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#228B8585" />
+
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_confirm_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/HDWalletCreateFragment_et"
         android:layout_marginTop="1dp"
-        android:background="@null"
         android:hint="确认钱包密码"
-        android:padding="15dp"
-        android:textColorHint="#B4B4AEAE"
-        android:textSize="16sp" />
+         />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="15dp"
-        android:background="#228B8585" />
+
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="#fff">
 
         <TextView
             android:layout_width="wrap_content"
@@ -138,34 +110,24 @@
             android:textSize="16sp" />
     </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="15dp"
-        android:background="#228B8585" />
+
 
     <androidx.appcompat.widget.AppCompatCheckedTextView
         android:id="@+id/ctv_is_agreed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:drawableStart="@drawable/resources_img_credittrade_checked"
         android:drawablePadding="10dp"
         android:padding="15dp"
         android:text="@string/ctv_is_agreed" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="15dp"
-        android:background="#228B8585" />
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_create_wallet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:background="@color/colorPrimary"
         android:text="创建钱包"
-        android:textColor="#fff"
-        android:textSize="18sp" />
+        style="@style/HDWalletCreateFragment_button" />
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

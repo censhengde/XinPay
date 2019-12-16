@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBackgound"
+    android:orientation="vertical"
+    tools:context=".ui.ConfirmBMWFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/btn_backup_mnemonic_word_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/resources_img_nav_navback"
+            android:tint="@color/colorPrimaryDark"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="备份助记词"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/viewBackgound"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请认真阅读如下说明"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/HDWalletCreateFragment_explain_text"
+            android:text="未备份助记词,将无法保障资产安全." />
+
+        <TextView
+            style="@style/HDWalletCreateFragment_explain_text"
+            android:text="删除程序后,您需要使用助记词恢复钱包" />
+
+        <TextView
+            style="@style/HDWalletCreateFragment_explain_text"
+            android:text="请确保在四周无人,没有摄像头的安全环境下进行备份." />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_backup_mnemonic_word"
+        style="@style/HDWalletCreateFragment_button"
+        android:text="备份助记词" />
+
+    <TextView
+        android:id="@+id/tv_tink_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="想想再说"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp" />
+</androidx.appcompat.widget.LinearLayoutCompat>

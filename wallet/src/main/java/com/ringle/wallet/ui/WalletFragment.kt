@@ -49,7 +49,7 @@ open class WalletFragment : BaseFragment() {
 
     private fun initTab() {
 //        val cloudWalletFragment = NavHostFragment.create(R.navigation.nav_graph_cloud_wallet)
-//        val hdWalletFragment = NavHostFragment.create(R.navigation.nav_graph_hd_wallet)
+//        val hdWalletFragment = NavHostFragment.create(R.navigation.nav_graph_hd_wallet_create)
 
 
         vp_wallet.adapter = VPageAdapter(
