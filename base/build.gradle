@@ -62,6 +62,6 @@ dependencies {
     api depend.LibFastJson
 
     api 'com.google.android.material:material:1.0.0'
-    api "androidx.fragment:fragment:1.2.0-rc03"
+    api "androidx.fragment:fragment:1.2.0-rc04"
     api 'androidx.preference:preference:1.1.0'
 }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBackgound"
+    android:orientation="vertical"
+    tools:context="com.ringle.xinpay.wallet.ui.HDWalletMainFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/cardview_dark_background"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tv_asset_quantity_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/resources_img_wallet_asset_visual"
+            android:drawablePadding="5dp"
+            android:text="资产总估值(CNY)"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/tv_cny_asset_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_asset_quantity_tip"
+            android:text="0.00"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_btc_asset_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_cny_asset_quantity"
+            android:text="≈ 0 BTC"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_hd_wallet_transfer"
+            style="@style/hdwallet_radio_button"
+            android:drawableTop="@drawable/resources_img_wallet_wallet_send"
+            android:text="转账" />
+        <RadioButton
+            android:id="@+id/rb_hd_wallet_receive"
+            style="@style/hdwallet_radio_button"
+            android:drawableTop="@drawable/resources_img_wallet_wallet_receive"
+            android:text="收款" />
+        <RadioButton
+            android:id="@+id/rb_hd_wallet_scan"
+            style="@style/hdwallet_radio_button"
+            android:drawableTop="@drawable/resources_img_wallet_wallet_scan"
+            android:text="扫一扫" />
+        <RadioButton
+            android:id="@+id/rb_hd_wallet_batch"
+            style="@style/hdwallet_radio_button"
+            android:drawableTop="@drawable/resources_img_wallet_wallet_batch"
+            android:text="群发宝" />
+
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_coin_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,15 +1,12 @@
 package com.ringle.xinpay.ui.fragment.wallet
 
 import android.graphics.Color
-import android.os.Bundle
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
-import android.view.View
-import com.ringle_al.common.base.BaseFragment
+import com.ringle.xinpay.common.base.BaseFragment
 import com.ringle.wallet.R
 import com.ringle.xinpay.ui.activity.MainActivity
-import kotlinx.android.synthetic.main.fragment_cloud_wallet_login.*
 import kotlinx.android.synthetic.main.fragment_hd_wallet_create.*
 import androidx.lifecycle.Observer
 

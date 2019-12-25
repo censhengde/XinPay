@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import com.ringle.xinpay.ui.fragment.borrow.C2CBorrowFragment
 import com.ringle.xinpay.ui.fragment.borrow.FlashBorrowFragment
 import com.ringle.xinpay.ui.fragment.borrow.MatchBorrowFragment
-import com.ringle_al.common.base.BaseFragment
 
 import com.ringle.wallet.R
 

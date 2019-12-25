@@ -6,11 +6,10 @@ import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import androidx.lifecycle.Observer
-import com.ringle_al.common.base.BaseFragment
+import com.ringle.xinpay.common.base.BaseFragment
 import com.ringle.wallet.R
 import com.ringle.xinpay.ui.activity.MainActivity
 import kotlinx.android.synthetic.main.fragment_cloud_wallet_login.*
-import org.jetbrains.anko.error
 import org.jetbrains.anko.info
 
 /**

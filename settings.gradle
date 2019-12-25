@@ -1,2 +1,2 @@
-include ':app', ':common', ':base', ':wallet'
-rootProject.name='Wallet'
+include ':app', ':wallet', ':base', ':common', ':user'
+rootProject.name='XinPay'

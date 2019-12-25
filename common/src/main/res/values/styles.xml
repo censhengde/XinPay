@@ -39,6 +39,10 @@
     <style name="secondaryTitle" parent="primaryTitle">
         <item name="android:textSize">16sp</item>
     </style>
+    <!--三级标题-->
+    <style name="level_3_title" parent="primaryTitle">
+        <item name="android:textSize">12sp</item>
+    </style>
     <!--正文内容-->
     <style name="body_text">
         <item name="android:textSize">12sp</item>

@@ -8,13 +8,13 @@ ext {
             compileSdkVersion: 29,
             minSdkVersion    : 21,
             targetSdkVersion : 29,
-            applicationId    : "com.ringle_al.shike",
+            applicationId    : "com.ringle.shike",
             versionCode      : 1,
             versionName      : "1.0.0"
     ]
 
     appId = [
-            "app": "com.ringle_al.shike",
+            "app": "com.ringle.shike",
 
 
     ]

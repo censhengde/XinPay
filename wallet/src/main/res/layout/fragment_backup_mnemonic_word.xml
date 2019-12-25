@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/pageBackgound"
     android:orientation="vertical"
-    tools:context=".ui.ConfirmBMWFragment">
+    tools:context="com.ringle.xinpay.wallet.ui.ConfirmBMWFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"

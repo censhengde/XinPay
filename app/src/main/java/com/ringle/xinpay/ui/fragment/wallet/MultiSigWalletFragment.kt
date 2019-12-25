@@ -1,6 +1,6 @@
 package com.ringle.xinpay.ui.fragment.wallet
 
-import com.ringle_al.common.base.BaseFragment
+import com.ringle.xinpay.common.base.BaseFragment
 import com.ringle.wallet.R
 
 /**

@@ -3,13 +3,11 @@ package com.ringle.xinpay.ui.activity
 import android.os.Bundle
 import androidx.lifecycle.LiveData
 import androidx.navigation.NavController
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.ringle.wallet.R
-import com.ringle_al.common.base.BaseActivity
+import com.ringle.xinpay.common.base.BaseActivity
 import com.ringle.xinpay.setupWithNavController
 import kotlinx.android.synthetic.main.activity_main_nav_host.*
-import androidx.lifecycle.Observer
 
 class MainActivity : BaseActivity() {
 

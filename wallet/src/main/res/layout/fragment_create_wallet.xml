@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/pageBackgound"
-    tools:context=".ui.HDWalletCreateFragment">
+    tools:context="com.ringle.xinpay.wallet.ui.HDWalletCreateFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"

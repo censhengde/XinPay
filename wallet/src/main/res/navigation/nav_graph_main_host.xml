@@ -8,7 +8,7 @@
     <!--入口-->
     <fragment
         android:id="@+id/fragment_wallet"
-        android:name="com.ringle.wallet.ui.WalletFragment">
+        android:name="com.ringle.xinpay.wallet.ui.WalletFragment">
         <!--去恢复Hd钱包-->
         <action
             android:id="@+id/action_to_hd_wallet_recover"
@@ -17,10 +17,42 @@
         <action
             android:id="@+id/action_to_hd_wallet_create_frag"
             app:destination="@id/nav_graph_hd_wallet_create" />
+        <action
+            android:id="@+id/action_fragment_wallet_to_HDWalletLoginedFragment"
+            app:destination="@id/hd_wallet_main_fragment" />
     </fragment>
     <!--==========others===-->
     <!--创建页-->
     <include app:graph="@navigation/nav_graph_hd_wallet_create" />
+    <fragment
+        android:id="@+id/hd_wallet_main_fragment"
+        android:name="com.ringle.xinpay.wallet.ui.HDWalletMainFragment"
+        android:label="fragment_hdwallet_logined"
+        tools:layout="@layout/fragment_hdwallet_main" >
+        <action
+            android:id="@+id/action_HDWalletLoginedFragment_to_baseDealFragment"
+            app:destination="@id/transactionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/QRCodeReceiveFragment"
+        android:name="com.ringle.xinpay.wallet.ui.QRCodeReceiveFragment"
+        android:label="QRCodeReceiveFragment" />
+    <fragment
+        android:id="@+id/transferFragment"
+        android:name="com.ringle.xinpay.wallet.ui.TransferFragment"
+        android:label="fragment_transfer"
+        tools:layout="@layout/fragment_transfer" />
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.ringle.xinpay.wallet.ui.base.TransactionFragment"
+        android:label="BaseDealFragment" >
+        <action
+            android:id="@+id/action_baseDealFragment_to_transferFragment"
+            app:destination="@id/transferFragment" />
+        <action
+            android:id="@+id/action_baseDealFragment_to_QRCodeReceiveFragment"
+            app:destination="@id/QRCodeReceiveFragment" />
+    </fragment>
 
 </navigation>
 

@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 import com.ringle.xinpay.ui.fragment.wallet.CloudWalletFragment
 import com.ringle.xinpay.ui.fragment.wallet.HDWalletFragment
 import com.ringle.xinpay.ui.fragment.wallet.MultiSigWalletFragment
-import com.ringle_al.common.base.BaseFragment
+import com.ringle.xinpay.common.base.BaseFragment
 
 import com.ringle.wallet.R
 import kotlinx.android.synthetic.main.fragment_tab_wallet.*

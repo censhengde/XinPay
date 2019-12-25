@@ -10,29 +10,31 @@
     <!--创建页-->
     <fragment
         android:id="@+id/fragment_hd_wallet_create"
-        android:name="com.ringle.wallet.ui.HDWalletCreateFragment">
+        android:name="com.ringle.xinpay.wallet.ui.HDWalletCreateFragment">
         <action
-            android:id="@+id/action_hd_wallet_create_to_hd_wallet_backup"
-            app:destination="@id/fragment_hd_wallet_backup_mnemonic_word_01" />
+            android:id="@+id/action_create_to_browse"
+            app:destination="@id/frag_browse_bmw" />
     </fragment>
     <!-- 确认备份助记词页;-->
     <fragment
-        android:id="@+id/fragment_hd_wallet_backup_mnemonic_word_01"
-        android:name="com.ringle.wallet.ui.ConfirmBMWFragment">
+        android:id="@+id/frag_confirm_bmw"
+        android:name="com.ringle.xinpay.wallet.ui.ConfirmBMWFragment">
         <action
-            android:id="@+id/action_hd_wallet_create_to_hd_wallet_backup_02"
-            app:destination="@id/fragment_hd_wallet_backup_mnemonic_word_02" />
+            android:id="@+id/action_confirm_to_browse"
+            app:destination="@id/frag_browse_bmw" />
     </fragment>
     <!-- 浏览助记词页;-->
     <fragment
-        android:id="@+id/fragment_hd_wallet_backup_mnemonic_word_02"
-        android:name="com.ringle.wallet.ui.BrowseBMWFragment">
-
+        android:id="@+id/frag_browse_bmw"
+        android:name="com.ringle.xinpay.wallet.ui.BrowseBMWFragment">
+        <action
+            android:id="@+id/action_browse_to_verify"
+            app:destination="@id/frag_verify_mw" />
     </fragment>
-    <!-- 备份助记词页03:您的钱包助记词已生成-->
+    <!-- 检验助记词-->
     <fragment
-        android:id="@+id/fragment_hd_wallet_backup_mnemonic_word_03"
-        android:name="com.ringle.wallet.ui.ConfirmBMWFragment">
+        android:id="@+id/frag_verify_mw"
+        android:name="com.ringle.xinpay.wallet.ui.VerifyMnemonicFragment">
 
     </fragment>
 </navigation>

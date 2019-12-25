@@ -38,5 +38,16 @@
         <item name="android:textColor">#fff</item>
         <item name="android:textSize">18sp</item>
     </style>
-
+    <style name="hdwallet_radio_button" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
 </resources>
