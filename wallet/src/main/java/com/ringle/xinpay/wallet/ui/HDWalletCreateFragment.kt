@@ -11,8 +11,8 @@ import com.ringle.xinpay.common.base.BaseFragment
 import com.ringle.xinpay.common.base.navigate
 import com.ringle.xinpay.common.base.popBackStack
 import com.ringle.xinpay.common.util.LiveDataBus
+import com.ringle.xinpay.wallet.bean.MnemonicCode
 import kotlinx.android.synthetic.main.fragment_create_wallet.*
-import org.bitcoinj.crypto.MnemonicCode
 import org.consenlabs.tokencore.wallet.Identity
 import org.consenlabs.tokencore.wallet.model.Metadata
 import org.consenlabs.tokencore.wallet.model.Network
@@ -52,18 +52,17 @@ class HDWalletCreateFragment : BaseFragment() {
                 Metadata.HD
             )
             //导出助记词
-            val mnemonicWord = identity.exportIdentity(confirmPassword)
-            //得到以太坊钱包
-            val ethereumWallet = identity.wallets[0]
-            //比特币钱包
-            val bitcoinWallet = identity.wallets[1]
-            info { "助记词==$mnemonicWord,钱包==${identity.wallets.size}" }
+            val mnemonicCode = identity.exportIdentity(confirmPassword)
+            info { "助记词==$mnemonicCode" }
+            val mnemonicCodes = ArrayList<MnemonicCode>()
+            val words = mnemonicCode.split(" ")
+            for (i: Int in 1..words.size) {
+                mnemonicCodes.add(MnemonicCode(i, words[i - 1]))
+            }
 
             //发送数据
             LiveDataBus.getChannel("identity").value = identity
-//            LiveDataBus.getChannel("mnemonic").value = mnemonicWord
-//            LiveDataBus.getChannel("ethereumWallet").value = ethereumWallet
-//            LiveDataBus.getChannel("bitcoinWallet").value = bitcoinWallet
+            LiveDataBus.getChannel("mnemonicCode").value = mnemonicCodes
             //跳转页面
             navigate(R.id.action_create_to_browse)
 

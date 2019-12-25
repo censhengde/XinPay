@@ -6,4 +6,4 @@ package com.ringle.xinpay.wallet.bean
  * 说明:
  *
  */
-data class ItemMnemonicWord(var index:Int,var word:String)
+data class MnemonicCode(var index:Int, var code:String)

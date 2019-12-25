@@ -54,7 +54,7 @@
         xinpay不会在服务器保存您的助记词" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_mnemonic_word_list"
+        android:id="@+id/rv_mnemonic_code_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"/>

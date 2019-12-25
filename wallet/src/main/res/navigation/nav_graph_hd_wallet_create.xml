@@ -26,7 +26,7 @@
     <!-- 浏览助记词页;-->
     <fragment
         android:id="@+id/frag_browse_bmw"
-        android:name="com.ringle.xinpay.wallet.ui.BrowseBMWFragment">
+        android:name="com.ringle.xinpay.wallet.ui.BackupToMnemonicCodeFragment">
         <action
             android:id="@+id/action_browse_to_verify"
             app:destination="@id/frag_verify_mw" />
@@ -34,7 +34,7 @@
     <!-- 检验助记词-->
     <fragment
         android:id="@+id/frag_verify_mw"
-        android:name="com.ringle.xinpay.wallet.ui.VerifyMnemonicFragment">
+        android:name="com.ringle.xinpay.wallet.ui.VerifyMnemonicCodeFragment">
 
     </fragment>
 </navigation>

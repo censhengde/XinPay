@@ -1,23 +1,18 @@
 package com.ringle.xinpay.wallet.ui
 
 import android.os.Bundle
-import android.view.View
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.ringle.wallet.R
 import com.ringle.xinpay.common.base.BaseFragment
 import com.ringle.xinpay.common.base.navigate
 import com.ringle.xinpay.common.util.LiveDataBus
 import com.ringle.xinpay.wallet.adapter.CoinListAdapter
 import com.ringle.xinpay.wallet.bean.ItemCoinList
-import com.zhy.adapter.recyclerview.MultiItemTypeAdapter
 import kotlinx.android.synthetic.main.fragment_base_deal.*
 import kotlinx.android.synthetic.main.fragment_hdwallet_main.*
 import org.consenlabs.tokencore.wallet.Identity
-import org.consenlabs.tokencore.wallet.WalletManager
-import org.consenlabs.tokencore.wallet.transaction.BitcoinTransaction
-import java.util.ArrayList
+import java.util.*
 
 
 class HDWalletMainFragment : BaseFragment() {
@@ -65,26 +60,17 @@ class HDWalletMainFragment : BaseFragment() {
      */
     private fun initCoinList() {
         rv_coin_list.layoutManager = LinearLayoutManager(activity)
-        val adapter = CoinListAdapter(activity, R.layout.item_coin_list, mCoinListDatas)
-        adapter.setOnItemClickListener(object : MultiItemTypeAdapter.OnItemClickListener {
-            override fun onItemLongClick(
-                v: View?,
-                holder: RecyclerView.ViewHolder?,
-                position: Int
-            ): Boolean {
-                return true
-            }
+        val adapter = CoinListAdapter( R.layout.item_coin_list, mCoinListDatas)
+        adapter.setOnItemClickListener{ad,v,position->
+            //跳转交易页面
+            val name = mCoinListDatas[position].name
+            val args = Bundle()
+            args.putString("COIN_NAME", name)
+            navigate(R.id.action_HDWalletLoginedFragment_to_baseDealFragment, args)
+        }
 
-            override fun onItemClick(p0: View?, p1: RecyclerView.ViewHolder?, position: Int) {
-                //跳转交易页面
-                val name = mCoinListDatas[position].name
-                val args = Bundle()
-                args.putString("COIN_NAME", name)
-                navigate(R.id.action_HDWalletLoginedFragment_to_baseDealFragment, args)
 
-            }
 
-        })
         rv_coin_list.adapter = adapter
 
 
