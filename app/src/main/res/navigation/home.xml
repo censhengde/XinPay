@@ -30,8 +30,16 @@
         <action
             android:id="@+id/action_title_to_about"
             />
+        <deepLink app:uri="open://home"/>
+        <action
+            android:id="@+id/action_home_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
     </fragment>
-<!--    <fragment-->
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.ringle.xinpay.ui.fragment.UserInfoFragment"
+        android:label="UserInfoFragment" />
+    <!--    <fragment-->
 <!--        android:id="@+id/aboutScreen"-->
 <!--        android:name="com.example.android.navigationadvancedsample.homescreen.About"-->
 <!--        android:label="@string/title_about"-->

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!--根容器导航图,承载所有容器-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main_host"
+    app:startDestination="@id/fragment_wallet_main"
+    tools:ignore="UnusedNavigation">
+    <!---->
+    <!--入口-->
+    <fragment
+        android:id="@+id/fragment_wallet_main"
+        android:name="com.ringle.xinpay.wallet.ui.WalletMainFragment">
+
+        <!--去创建Hd钱包-->
+        <action
+            android:id="@+id/action_to_hd_wallet_create_frag"
+            app:destination="@id/graph_hd_wallet_create" />
+
+    </fragment>
+    <!--==========others===-->
+
+    <!--创建页-->
+    <include app:graph="@navigation/graph_hd_wallet_create" />
+    <!--导入钱包-->
+    <action
+        android:id="@+id/action_to_hd_wallet_import"
+        app:destination="@id/graph_hd_wallet_import" />
+    <include app:graph="@navigation/graph_hd_wallet_import" />
+
+    <!--查看助记词-->
+    <action
+        android:id="@+id/action_to_view_mnemonic"
+        app:destination="@id/graph_hd_wallet_view_mnemonic_code" />
+    <include app:graph="@navigation/graph_hd_wallet_view_mnemonic_code" />
+
+    <!--交易-->
+    <action
+        android:id="@+id/action_to_graph_hd_wallet_transfer"
+        app:destination="@id/graph_hd_wallet_transation" />
+    <include app:graph="@navigation/graph_hd_wallet_transation" />
+
+</navigation>
+

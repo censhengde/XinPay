@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
-import com.ringle.wallet.R
+import com.ringle.xinpay.wallet.R
 import com.ringle.xinpay.wallet.bean.MnemonicCode
 
 /**
@@ -16,7 +16,7 @@ import com.ringle.xinpay.wallet.bean.MnemonicCode
  *
  */
 open class MnemonicListAdapter(
-    data: MutableList<MnemonicCode>?,
+    data: MutableList<MnemonicCode>?=null,
     layoutResId: Int
 ) : BaseQuickAdapter<MnemonicCode, BaseViewHolder>(layoutResId, data) {
 

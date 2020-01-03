@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/frag_hdwallet_import"
+    android:id="@+id/graph_hd_wallet_import">
+    <action android:id="@+id/action_back_out_graph_hd_wallet_import"
+        app:popUpTo="@id/graph_hd_wallet_import"/>
+
+<fragment android:id="@+id/frag_hdwallet_import"
+    android:name="com.ringle.xinpay.wallet.ui.hd.imp.HDWalletImportFragment"/>
+</navigation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/graph_hd_wallet_view_mnemonic_code"
+    app:startDestination="@id/viewMnemonicCode01Fragment">
+    <action
+        android:id="@+id/action_back_out_graph_view_mnemonic_code"
+        app:popUpTo="@id/graph_hd_wallet_view_mnemonic_code"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/viewMnemonicCode01Fragment"
+        android:name="com.ringle.xinpay.wallet.ui.hd.ViewMnemonicCode01Fragment"
+        android:label="ViewMnemonicCode01Fragment">
+        <action
+            android:id="@+id/action_viewMnemonicCode01Fragment_to_viewMnemonicCode02Fragment"
+            app:destination="@id/viewMnemonicCode02Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewMnemonicCode02Fragment"
+        android:name="com.ringle.xinpay.wallet.ui.hd.ViewMnemonicCode02Fragment"
+        android:label="ViewMnemonicCode02Fragment" />
+</navigation>

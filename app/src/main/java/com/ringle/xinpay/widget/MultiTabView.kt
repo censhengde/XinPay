@@ -7,7 +7,7 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.ringle.wallet.R
+import com.ringle.xinpay.app.R
 import kotlinx.android.synthetic.main.multi_tab_view.view.*
 
 /**

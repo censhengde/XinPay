@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/pageBackgound"
     android:orientation="vertical"
-    tools:context="com.ringle.xinpay.wallet.ui.ConfirmBMWFragment">
+    tools:context="com.ringle.xinpay.wallet.ui.hd.create.ConfirmBMWFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,33 +32,7 @@
             android:textSize="20sp" />
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/viewBackgound"
-        android:orientation="vertical"
-        android:padding="15dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="请认真阅读如下说明"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            style="@style/HDWalletCreateFragment_explain_text"
-            android:text="未备份助记词,将无法保障资产安全." />
-
-        <TextView
-            style="@style/HDWalletCreateFragment_explain_text"
-            android:text="删除程序后,您需要使用助记词恢复钱包" />
-
-        <TextView
-            style="@style/HDWalletCreateFragment_explain_text"
-            android:text="请确保在四周无人,没有摄像头的安全环境下进行备份." />
-    </LinearLayout>
+   <include layout="@layout/lay_mnemonic_explain"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_backup_mnemonic_word"

@@ -17,6 +17,7 @@
 package com.ringle.xinpay
 
 import android.content.Intent
+import android.util.Log
 import android.util.SparseArray
 import androidx.core.util.forEach
 import androidx.core.util.set
@@ -49,6 +50,7 @@ fun BottomNavigationView.setupWithNavController(
     // First create a NavHostFragment for each NavGraph ID
     navGraphIds.forEachIndexed { index, navGraphId ->
         val fragmentTag = getFragmentTag(index)
+      Log.e("========>","fragmentTag:${fragmentTag}")
 
         // Find or create the Navigation host fragment
         val navHostFragment = obtainNavHostFragment(
@@ -57,7 +59,6 @@ fun BottomNavigationView.setupWithNavController(
             navGraphId,
             containerId
         )
-
         // Obtain its id
         val graphId = navHostFragment.navController.graph.id
 
@@ -94,6 +95,7 @@ fun BottomNavigationView.setupWithNavController(
                 // Pop everything above the first fragment (the "fixed start destination")
                 fragmentManager.popBackStack(firstFragmentTag,
                     FragmentManager.POP_BACK_STACK_INCLUSIVE)
+                Log.e("=======>","newlySelectedItemTag:${newlySelectedItemTag}")
                 val selectedFragment = fragmentManager.findFragmentByTag(newlySelectedItemTag)
                     as NavHostFragment
 
@@ -249,3 +251,13 @@ private fun FragmentManager.isOnBackStack(backStackName: String): Boolean {
 }
 
 private fun getFragmentTag(index: Int) = "bottomNavigation#$index"
+
+//button.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.next_fragment, null))
+
+//override fun onClick(v: View) {
+//    val amount: Float = ...
+//    val action =
+//        SpecifyAmountFragmentDirections
+//            .actionSpecifyAmountFragmentToConfirmationFragment(amount)
+//    v.findNavController().navigate(action)
+//}

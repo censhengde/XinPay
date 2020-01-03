@@ -3,7 +3,7 @@ package com.ringle.xinpay.wallet.adapter
 import android.widget.TextView
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
-import com.ringle.wallet.R
+import com.ringle.xinpay.wallet.R
 import com.ringle.xinpay.wallet.bean.MnemonicCode
 
 /**

@@ -1,6 +1,9 @@
+//apply plugin: 'com.android.library'
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -8,6 +11,10 @@ android {
         exclude 'lib/x86_64/darwin/libscrypt.dylib'
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
     defaultConfig {
         applicationId "com.ringle.xinpay.wallet"
         minSdkVersion 24
@@ -16,6 +23,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
     }
 
     buildTypes {
@@ -39,4 +48,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation project(path: ':common')
     implementation 'com.github.consenlabs:token-core-android:v0.1'
+
+//    kapt 'com.alibaba:arouter-compiler:1.2.2'
 }

@@ -1,7 +1,7 @@
 package com.ringle.xinpay.ui.fragment.borrow
 
-import com.ringle.wallet.R
 import com.ringle.xinpay.common.base.BaseFragment
+import com.ringle.xinpay.app.R
 
 /**
  * create by 岑胜德

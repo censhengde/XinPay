@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
 
     android:orientation="vertical"
-    tools:context="com.ringle.xinpay.wallet.ui.RecoverWalletFragment">
+    tools:context="com.ringle.xinpay.wallet.ui.hd.recover.HDWalletRecoverFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"

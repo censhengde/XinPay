@@ -4,6 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.ringle.xinpay.ui.fragment.tab.BorrowFragment">
+    tools:context="com.ringle.xinpay.ui.fragment.tab.BorrowMainFragment">
     <include layout="@layout/fragment_tab_wallet"/>
 </FrameLayout>

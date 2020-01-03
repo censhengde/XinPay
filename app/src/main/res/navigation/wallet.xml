@@ -18,31 +18,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/wallet"
-    app:startDestination="@+id/fragment_tab_wallet">
-    <action android:id="@+id/action_cloud_to_regist"
-        app:destination="@id/fragment_cloud_wallet_regist"/>
+    app:startDestination="@id/root"
+    >
 
-    <fragment
-        android:id="@+id/fragment_tab_wallet"
-        android:name="com.ringle.xinpay.ui.fragment.tab.WalletFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_tab_wallet">
-        <action android:id="@+id/action_tab_wallet_to_regist"
-            app:destination="@id/fragment_cloud_wallet_regist"/>
-        <action android:id="@+id/action_tab_wallet_to_create_wallet"
-            app:destination="@id/fragment_create_wallet"/>
-    </fragment>
-    <fragment
-        android:id="@+id/fragment_cloud_wallet"
-        android:name="com.ringle.wallet.ui.CloudWalletFragment">
+<fragment android:id="@+id/root"
+    android:name="com.ringle.xinpay.ui.fragment.tab.TabWalletFragment"
+    >
+<!--   <action android:id="@+id/action_to_wallet_module"-->
+<!--       app:destination="@id/nav_graph_main_host"/>-->
+</fragment>
+<!--   <include app:graph="@navigation/wallet_graph_main_host"/>-->
 
-    </fragment>
-    <fragment
-        android:id="@+id/fragment_cloud_wallet_regist"
-        android:name="com.ringle.wallet.ui.CloudWalletRegistFragment">
-<!--        <action android:id="@+id/action_cloud_to_regist"/>-->
-    </fragment>
-    <fragment
-        android:id="@+id/fragment_create_wallet"
-        android:name="com.ringle.wallet.ui.HDWalletCreateFragment"/>
+
+
 </navigation>

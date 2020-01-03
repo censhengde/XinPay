@@ -6,5 +6,13 @@ package com.ringle.xinpay.wallet.coin
  * 说明:所有币种的抽象
  *
  */
- open class Coin(var name:String="",var balance:String="0") {
-}
+data class Coin(
+    //名称
+    var name: String = "",
+    //余额
+    var balance: String? = null,
+    //价值人民币
+    var cny: String? = null,
+    //logo
+    val logo: String? = null
+)

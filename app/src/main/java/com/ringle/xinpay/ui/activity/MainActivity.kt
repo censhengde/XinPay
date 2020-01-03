@@ -4,9 +4,9 @@ import android.os.Bundle
 import androidx.lifecycle.LiveData
 import androidx.navigation.NavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.ringle.wallet.R
 import com.ringle.xinpay.common.base.BaseActivity
 import com.ringle.xinpay.setupWithNavController
+import com.ringle.xinpay.app.R
 import kotlinx.android.synthetic.main.activity_main_nav_host.*
 
 class MainActivity : BaseActivity() {

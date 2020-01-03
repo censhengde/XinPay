@@ -24,7 +24,7 @@
 
     <fragment
         android:id="@+id/lend"
-        android:name="com.ringle.xinpay.ui.fragment.tab.BorrowFragment"
+        android:name="com.ringle.xinpay.ui.fragment.tab.BorrowMainFragment"
         android:label="@string/lend"
         tools:layout="@layout/fragment_tab_borrow">
         <action

@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ringle.xinpay.wallet.ui.hd.imp.HDWalletImportFragment">
+
+    <include layout="@layout/common_action_bar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:text="密码用于加密保护私钥,以及转账等,所以强度非常重要."
+            style="@style/HDWalletCreateFragment_explain_text" />
+
+        <TextView
+            style="@style/HDWalletCreateFragment_explain_text"
+            android:text="XinPay不存储密码,也无法帮您找回,请务必牢记"
+            />
+        <TextView
+            style="@style/HDWalletCreateFragment_explain_text"
+            android:text="使用助记词导入的同时可以修改密码."
+            />
+
+    </LinearLayout>
+<EditText
+    android:id="@+id/et_hdwallet_import_mnemonic_code"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_margin="15dp"
+    android:maxLines="2"
+    android:inputType="textMultiLine"
+    android:hint="请输入助记词,输入时需用空格间隔"
+    android:background="@null"/>
+
+
+    <TextView
+        style="@style/HDWalletCreateFragment_tv"
+        android:layout_marginTop="10dp"
+        android:text="设置密码" />
+
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_hdwallet_input_password"
+        style="@style/HDWalletCreateFragment_et"
+        android:layout_marginTop="1dp"
+        android:hint="不少于8位包含英文,数字密码"
+        />
+
+
+
+    <TextView
+        style="@style/HDWalletCreateFragment_tv"
+        android:layout_marginTop="10dp"
+        android:text="确认密码"
+        />
+
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_hdwallet_confirm_password"
+        style="@style/HDWalletCreateFragment_et"
+        android:layout_marginTop="1dp"
+        android:hint="确认钱包密码"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_hdwallet_import"
+        android:text="开始导入"
+        style="@style/HDWalletCreateFragment_button" />
+</LinearLayout>

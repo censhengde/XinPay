@@ -6,5 +6,5 @@ package com.ringle.xinpay.wallet.coin
  * 说明:
  *
  */
-class BTC(balance: String) : Coin(balance) {
-}
+//class BTC(balance: String) : Coin(balance) {
+//}

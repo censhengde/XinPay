@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_hd_wallet_create"
+    app:startDestination="@id/fragment_hd_wallet_create"
+    tools:ignore="UnusedNavigation">
+
+    <action
+        android:id="@+id/action_back_out_graph_hd_wallet_create"
+        app:popUpTo="@id/graph_hd_wallet_create"
+        app:popUpToInclusive="true" />
+    <!--创建页-->
+    <fragment
+        android:id="@+id/fragment_hd_wallet_create"
+        android:name="com.ringle.xinpay.wallet.ui.hd.create.HDWalletCreateFragment">
+        <action
+            android:id="@+id/action_create_to_browse"
+            app:destination="@id/frag_hdwallet_backup_mnemonic" />
+    </fragment>
+    <!-- 确认备份助记词页;-->
+    <fragment
+        android:id="@+id/frag_confirm_bmw"
+        android:name="com.ringle.xinpay.wallet.ui.hd.create.ConfirmBMWFragment">
+        <action
+            android:id="@+id/action_confirm_to_browse"
+            app:destination="@id/frag_hdwallet_backup_mnemonic" />
+    </fragment>
+    <!-- 浏览助记词页;-->
+    <fragment
+        android:id="@+id/frag_hdwallet_backup_mnemonic"
+        android:name="com.ringle.xinpay.wallet.ui.hd.create.HDWalletBackupMnemonicFragment">
+        <action
+            android:id="@+id/action_browse_to_verify"
+            app:destination="@id/frag_verify_mw" />
+    </fragment>
+    <!-- 检验助记词-->
+    <fragment
+        android:id="@+id/frag_verify_mw"
+        android:name="com.ringle.xinpay.wallet.ui.hd.create.HDWalletVerifyMnemonicFragment">
+        <action
+            android:id="@+id/action_verify_to_fragment_wallet"
+            app:popUpTo="@id/fragment_wallet_main"
+            app:popUpToInclusive="true" /><!--其他Fragment全部出栈,如果popUpToInclusive=false,则原来的回退栈中的fragment_wallet不会删除,就会有两个实例-->
+    </fragment>
+</navigation>

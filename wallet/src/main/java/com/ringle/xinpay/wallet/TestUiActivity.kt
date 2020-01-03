@@ -5,9 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import com.ringle.wallet.R
 import com.ringle.xinpay.common.qrcode.QRCodeHelper
-import kotlinx.android.synthetic.main.fragment_receive_qrcode.*
+import kotlinx.android.synthetic.main.fragment_hdwallet_transation_recieve.*
 
 class TestUiActivity : AppCompatActivity() {
 

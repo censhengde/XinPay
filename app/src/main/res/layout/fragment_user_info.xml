@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_action_bar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HD钱包"/>
+    <TextView
+        android:id="@+id/tv_user_info_view_mnemonic_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/resources_img_mine_mine_display_mnemonic"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:drawableEnd="@drawable/resources_img_icon_right_arrow"
+        android:padding="10dp"
+        android:text="查看助记词"/>
+    <TextView
+        android:id="@+id/tv_user_info_import_hdwallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/resources_img_mine_mine_import"
+        android:drawablePadding="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:layout_marginTop="1dp"
+        android:drawableEnd="@drawable/resources_img_icon_right_arrow"
+        android:padding="10dp"
+        android:text="导入钱包"/>
+
+</LinearLayout>

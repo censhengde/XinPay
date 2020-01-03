@@ -5,13 +5,13 @@
 
     <fragment
         android:id="@+id/fragment_cloud_wallet_default"
-        android:name="com.ringle.xinpay.wallet.ui.CloudWalletFragment">
+        android:name="com.ringle.xinpay.wallet.ui.cloud.CloudWalletFragment">
         <action android:id="@+id/action_to_cloud_wallet_login_frag"
             app:destination="@id/fragment_cloud_wallet_login"/>
     </fragment>
 <fragment
     android:id="@+id/fragment_cloud_wallet_login"
-    android:name="com.ringle.xinpay.wallet.ui.CloudWalletFragment">
+    android:name="com.ringle.xinpay.wallet.ui.cloud.CloudWalletFragment">
 
 </fragment>
 </navigation>

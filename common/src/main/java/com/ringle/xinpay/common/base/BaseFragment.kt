@@ -11,33 +11,9 @@ import com.ringle.xinpay.common.util.LiveDataBus
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import androidx.lifecycle.Observer
+import com.ringle.xinpay.R
+import kotlinx.android.synthetic.main.common_action_bar.*
 
-fun Fragment.findNavController(): NavController =
-    NavHostFragment.findNavController(this)
-
-fun Fragment.navigate(actionId: Int, bundle: Bundle? = null) {
-    if (bundle == null) {
-        LiveDataBus.getChannel("hdWalletController").observe(this, Observer { t ->
-            (t as NavController).navigate(actionId)
-        })
-    } else {
-        LiveDataBus.getChannel("hdWalletController").observe(this, Observer { t ->
-            (t as NavController).navigate(actionId, bundle)
-        })
-    }
-}
-
-fun Fragment.popBackStack() {
-    LiveDataBus.getChannel("hdWalletController").observe(this, Observer { t ->
-        (t as NavController).popBackStack()
-    })
-}
-
-fun Fragment.popBackStack(destinationId: Int, inclusive: Boolean) {
-    LiveDataBus.getChannel("hdWalletController").observe(this, Observer { t ->
-        (t as NavController).popBackStack(destinationId, inclusive)
-    })
-}
 
 abstract class BaseFragment : NavHostFragment(), AnkoLogger {
     abstract fun setContentView(): Int
@@ -54,7 +30,7 @@ abstract class BaseFragment : NavHostFragment(), AnkoLogger {
 
         val contentView = inflater.inflate(setContentView(), container, false)
 
-        mNavController = findNavController()
+//        mNavController = findNavController()
         info { "" }
 
         return contentView
@@ -71,4 +47,39 @@ abstract class BaseFragment : NavHostFragment(), AnkoLogger {
 
 
     protected open fun initData() {}
+
+
+    fun initActionBar(
+        left: Int = R.drawable.resources_img_nav_navback,
+        title: String,
+        titleLogo: Int? = null,
+        right: Int? = null,
+        onClickBack: (() -> Unit)? = null,
+        onClickTitle: (() -> Unit)? = null,
+        background: Int? = null
+    ) {
+        //背景色
+        background?.let {
+            common_bar.setBackgroundColor(background)
+        }
+        //返回键
+        iv_common_action_bar_left.setImageResource(left)
+        iv_common_action_bar_left.setOnClickListener {
+            onClickBack?.invoke()
+        }
+        //标题
+        tv_common_action_bar_center_title.text = title
+        tv_common_action_bar_center_title.setOnClickListener {
+            onClickTitle?.invoke()
+        }
+        titleLogo?.let {
+            val drawable = resources.getDrawable(titleLogo, null)
+            tv_common_action_bar_center_title.setCompoundDrawables(null, null, drawable, null)
+//            tv_common_action_bar_center_title.compoundDrawablePadding=5
+        }
+        //右图标
+        right?.let {
+            iv_common_action_bar_right.setImageResource(right)
+        }
+    }
 }

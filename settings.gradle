@@ -1,2 +1,2 @@
-include ':app', ':wallet', ':base', ':common', ':user'
+include ':app', ':wallet', ':base', ':common', ':user', ':module-home'
 rootProject.name='XinPay'

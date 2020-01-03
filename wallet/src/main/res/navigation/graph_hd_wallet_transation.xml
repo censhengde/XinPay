@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_hd_wallet_transation"
+    app:startDestination="@id/frag_hd_wallet_transation_main"
+    tools:ignore="UnusedNavigation">
+
+    <action
+        android:id="@+id/action_back_out_graph_hd_wallet_transation"
+        app:popUpTo="@navigation/wallet_graph_main_host"
+        app:popUpToInclusive="true" />
+
+    <!--交易页-->
+    <fragment
+        android:id="@+id/frag_hd_wallet_transation_main"
+        android:name="com.ringle.xinpay.wallet.ui.hd.transation.HDWalletTransationMainFragment">
+        <action
+            android:id="@+id/action_create_to_browse"
+            app:destination="@id/frag_hdwallet_backup_mnemonic" />
+
+    </fragment>
+    <!-- 转账页;-->
+    <fragment
+        android:id="@+id/frag_hdwallet_transation_send"
+        android:name="com.ringle.xinpay.wallet.ui.hd.transation.HDWalletSendFragment">
+        <action
+            android:id="@+id/action_frag_hdwallet_transation_send_to_frag_hdwallet_transation_choose_coin"
+            app:destination="@id/frag_hdwallet_transation_choose_coin" />
+        <action
+            android:id="@+id/action_confirm_to_browse"
+            app:destination="@id/frag_hdwallet_backup_mnemonic" />
+        <deepLink app:uri="http://www.ringle.com/xinpay/HDWalletSendFragment" />
+    </fragment>
+    <!-- 收款页;-->
+    <fragment
+        android:id="@+id/frag_hdwallet_transation_recieve"
+        android:name="com.ringle.xinpay.wallet.ui.hd.transation.HDWalletReceiveFragment">
+        <action
+            android:id="@+id/action_frag_hdwallet_transation_recieve_to_frag_hdwallet_transation_choose_coin"
+            app:destination="@id/frag_hdwallet_transation_choose_coin" />
+    </fragment>
+    <!--更换币种-->
+    <fragment
+        android:id="@+id/frag_hdwallet_transation_choose_coin"
+        android:name="com.ringle.xinpay.wallet.ui.hd.transation.HDWalletChooseCoinFragment">
+        <action
+            android:id="@+id/action_back_to_frag_hdwallet_transation_recieve"
+            app:popUpTo="@id/frag_hdwallet_transation_recieve"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_back_to_frag_hdwallet_transation_send"
+            app:popUpTo="@id/frag_hdwallet_transation_send"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+</navigation>

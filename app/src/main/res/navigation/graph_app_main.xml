@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/frag_app_main"
+    android:id="@+id/graph_app_main">
+    <!--导航主页-->
+    <fragment
+        android:id="@+id/frag_app_main"
+        android:name="com.ringle.xinpay.ui.fragment.AppMainFragment">
+    </fragment>
+    <!--首页模块-->
+    <fragment android:id="@+id/frag_app_tab_home" />
+
+    <!--钱包模块-->
+<!--<include app:graph="@navigation/wallet_graph_main_host"/>-->
+</navigation>

@@ -2,9 +2,11 @@ package com.ringle.xinpay.ui.fragment.tab
 
 import android.content.Context
 import android.widget.ImageView
+import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.ringle.xinpay.common.base.BaseFragment
-import com.ringle.wallet.R
+import com.ringle.xinpay.common.extensions.navigate
+import com.ringle.xinpay.app.R
 import com.youth.banner.loader.ImageLoader
 import kotlinx.android.synthetic.main.fragment_tab_home.*
 
@@ -22,6 +24,7 @@ class HomeFragment : BaseFragment() {
     override fun onStart() {
         super.onStart()
         initView()
+        initActionBar()
     }
 
     private fun initView() {
@@ -34,7 +37,7 @@ class HomeFragment : BaseFragment() {
         banner_home.setImages(banners_path)
         banner_home.setImageLoader(object : ImageLoader() {
             override fun displayImage(context: Context?, path: Any?, imageView: ImageView?) {
-                Glide.with(context!!.getApplicationContext())
+                Glide.with(context!!.applicationContext)
                     .load(path)
                     .into(imageView!!);
             }
@@ -53,6 +56,13 @@ class HomeFragment : BaseFragment() {
     }
 
 
+    private fun initActionBar(){
+        val tv=activity?.findViewById<TextView>(R.id.action_bar_home_user_avatar)
+        tv?.setOnClickListener {
+           //跳转
+            navigate(R.id.action_home_to_userInfoFragment)
+        }
+    }
     override fun onStop() {
         super.onStop()
         banner_home.stopAutoPlay()

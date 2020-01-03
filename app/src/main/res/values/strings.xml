@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Wallet</string>
+    <string name="app_name">XinPay</string>
     <string name="title_home">首页</string>
     <string name="lend">借贷</string>
     <string name="deal">交易</string>
