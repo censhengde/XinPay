@@ -8,8 +8,8 @@
 
     <action
         android:id="@+id/action_back_out_graph_hd_wallet_transation"
-        app:popUpTo="@navigation/wallet_graph_main_host"
-        app:popUpToInclusive="true" />
+        app:popUpTo="@id/graph_hd_wallet_transation"
+        app:popUpToInclusive="false" />
 
     <!--交易页-->
     <fragment

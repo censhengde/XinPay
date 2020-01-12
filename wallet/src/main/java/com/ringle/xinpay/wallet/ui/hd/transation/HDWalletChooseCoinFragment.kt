@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.ringle.xinpay.common.base.BaseFragment
 import com.ringle.xinpay.common.extensions.navigate
+import com.ringle.xinpay.common.extensions.popBackStack
 
 import com.ringle.xinpay.wallet.R
 import kotlinx.android.synthetic.main.fragment_hdwallet_choose_coin.*
@@ -21,7 +22,7 @@ class HDWalletChooseCoinFragment : BaseFragment() {
     override fun initData() {
         initActionBar(title = "更换币种",
             onClickBack = {
-            navigate(R.id.action_back_to_frag_hdwallet_transation_recieve)
+                popBackStack()
         })
     }
 

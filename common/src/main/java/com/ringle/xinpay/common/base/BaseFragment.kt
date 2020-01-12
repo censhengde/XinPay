@@ -73,9 +73,10 @@ abstract class BaseFragment : NavHostFragment(), AnkoLogger {
             onClickTitle?.invoke()
         }
         titleLogo?.let {
-            val drawable = resources.getDrawable(titleLogo, null)
+            val drawable = activity?.getDrawable(titleLogo)
+            drawable?.setBounds(0, 0, drawable.intrinsicWidth, drawable.minimumHeight)
             tv_common_action_bar_center_title.setCompoundDrawables(null, null, drawable, null)
-//            tv_common_action_bar_center_title.compoundDrawablePadding=5
+            tv_common_action_bar_center_title.compoundDrawablePadding=5
         }
         //右图标
         right?.let {

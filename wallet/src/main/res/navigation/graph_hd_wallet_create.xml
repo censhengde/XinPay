@@ -40,7 +40,7 @@
         android:name="com.ringle.xinpay.wallet.ui.hd.create.HDWalletVerifyMnemonicFragment">
         <action
             android:id="@+id/action_verify_to_fragment_wallet"
-            app:popUpTo="@id/fragment_wallet_main"
+            app:popUpTo="@id/frag_wallet_main"
             app:popUpToInclusive="true" /><!--其他Fragment全部出栈,如果popUpToInclusive=false,则原来的回退栈中的fragment_wallet不会删除,就会有两个实例-->
     </fragment>
 </navigation>

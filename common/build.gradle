@@ -38,6 +38,6 @@ dependencies {
 
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.0-beta2'
     api 'com.tencent:mmkv:1.0.23'
-
+    api 'com.alibaba:fastjson:1.2.59'
     api project(path:':base')
 }

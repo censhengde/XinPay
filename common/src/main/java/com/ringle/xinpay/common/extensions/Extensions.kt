@@ -32,25 +32,33 @@ fun Fragment.navigate(actionId: Int, bundle: Bundle? = null) {
     }
 }
 
-fun Fragment.popBackStack() :Boolean{
-    var ret=true
+fun Fragment.navigateUp(): Boolean {
+    var ret=false
     LiveDataBus.getChannel(KEY_GLOBAL_NAV_CONTROLLER).observe(this, Observer { t ->
-        ret= (t as NavController).popBackStack()
+        ret = (t as NavController).navigateUp()
     })
     return ret
 }
 
-fun Fragment.popBackStack(destinationId: Int, inclusive: Boolean) :Boolean{
-    var ret=true
+fun Fragment.popBackStack(): Boolean {
+    var ret = true
     LiveDataBus.getChannel(KEY_GLOBAL_NAV_CONTROLLER).observe(this, Observer { t ->
-      ret=  (t as NavController).popBackStack(destinationId, inclusive)
+        ret = (t as NavController).popBackStack()
     })
     return ret
 }
 
-fun Fragment.navigate( deepLink:String, navOptions: NavOptions? = null) {
-    val uri=Uri.parse(deepLink)
-    val intent= Intent()
+fun Fragment.popBackStack(destinationId: Int, inclusive: Boolean): Boolean {
+    var ret = true
+    LiveDataBus.getChannel(KEY_GLOBAL_NAV_CONTROLLER).observe(this, Observer { t ->
+        ret = (t as NavController).popBackStack(destinationId, inclusive)
+    })
+    return ret
+}
+
+fun Fragment.navigate(deepLink: String, navOptions: NavOptions? = null) {
+    val uri = Uri.parse(deepLink)
+    val intent = Intent()
     intent.data = uri
     if (navOptions == null) {
         LiveDataBus.getChannel(KEY_GLOBAL_NAV_CONTROLLER).observe(this, Observer { t ->

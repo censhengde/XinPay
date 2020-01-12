@@ -12,7 +12,7 @@ class TestUiActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_base_deal)
+        setContentView(R.layout.fragment_hdwallet_send)
 //        initActionBar()
 
 //        initQRCode()

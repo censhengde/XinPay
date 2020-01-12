@@ -4,9 +4,7 @@ package com.ringle.xinpay.wallet.ui
 import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
 import androidx.fragment.app.FragmentStatePagerAdapter
-import androidx.viewpager.widget.PagerAdapter
 
 import com.ringle.xinpay.wallet.R
 import com.ringle.xinpay.common.base.BaseFragment
@@ -16,6 +14,8 @@ import com.ringle.xinpay.wallet.ui.hd.HDWalletMainFragment
 import com.tencent.mmkv.MMKV
 import kotlinx.android.synthetic.main.fragment_wallet_main.*
 import org.consenlabs.tokencore.wallet.Identity
+import org.jetbrains.anko.info
+import kotlin.reflect.KClass
 
 /**
  * 是wallet模块一切页面的容器
@@ -24,11 +24,11 @@ import org.consenlabs.tokencore.wallet.Identity
  */
 open class WalletMainFragment : BaseFragment() {
 
-    private var isHDWalletLogined = false
+    private var isHDWalletCreated = false
     private var isCloudWalletLogined = false
     override fun setContentView(): Int = R.layout.fragment_wallet_main
     protected open val mPages: ArrayList<Fragment> = ArrayList(3)
-
+    private lateinit var mViewPagerAdapter: VPageAdapter
     protected open val mTabTitles by lazy(LazyThreadSafetyMode.NONE) {
         arrayListOf(
             "首页",
@@ -39,9 +39,11 @@ open class WalletMainFragment : BaseFragment() {
 
 
     override fun initData() {
+        info { "initData执行" }
         initCloudWalletMainPage()
         initHDWalletMainPage()
         initTab()
+//        WalletMainFragment::class.java
     }
 
     /**
@@ -62,15 +64,16 @@ open class WalletMainFragment : BaseFragment() {
      */
     private fun initHDWalletMainPage() {
         //判断是否存在currentIdentity
-        isHDWalletLogined = Identity.currentIdentity != null
-        when (isHDWalletLogined) {
+        isHDWalletCreated = Identity.currentIdentity != null
+        when (isHDWalletCreated) {
             true -> mPages.add(2, HDWalletMainFragment())
-            false -> mPages.add(2,HDWalletMainFragment())
+            false -> mPages.add(2, HDWalletDefaultFragment())
         }
     }
 
     private fun initTab() {
-        vp_wallet.adapter = VPageAdapter(childFragmentManager, 0, mPages, mTabTitles)
+        mViewPagerAdapter = VPageAdapter(childFragmentManager, 0, mPages, mTabTitles)
+        vp_wallet.adapter = mViewPagerAdapter
         tl_wallet.setupWithViewPager(vp_wallet)
 
     }
@@ -79,7 +82,7 @@ open class WalletMainFragment : BaseFragment() {
     override fun onResume() {
         super.onResume()
         freshCloudWalletMainPageState()
-//        freshHDWalletMainPageState()
+        freshHDWalletMainPageState()
     }
 
     override fun onDestroyView() {
@@ -91,18 +94,14 @@ open class WalletMainFragment : BaseFragment() {
      *检查HDWalletMainPageState,
      */
     private fun freshHDWalletMainPageState() {
-        //判断页面内容是否发生改变
+        //true:说明已有身份
         val currentState = Identity.currentIdentity != null
-        if (currentState != isHDWalletLogined) {
-            isHDWalletLogined = currentState
-            vp_wallet.removeViewAt(2)
-            when (isHDWalletLogined) {
-                true -> mPages.add(2, HDWalletMainFragment())
-                false -> mPages.add(2, HDWalletDefaultFragment())
-            }
-            //通知数据源以改变
-            vp_wallet.adapter?.notifyDataSetChanged()
+        if (currentState != isHDWalletCreated) {
+            //更新状态
+            isHDWalletCreated = currentState
+            mViewPagerAdapter.replace(2,HDWalletMainFragment())
         }
+
     }
 
     private fun freshCloudWalletMainPageState() {}
@@ -112,9 +111,9 @@ open class WalletMainFragment : BaseFragment() {
      *适配器
      */
     private class VPageAdapter(
-        fm: FragmentManager,
+        val fm: FragmentManager,
         behavior: Int,
-        val pages: List<Fragment>,
+        val pages: MutableList<Fragment>,
         val titles: List<String>
     ) : FragmentStatePagerAdapter(fm, behavior) {
 
@@ -131,7 +130,23 @@ open class WalletMainFragment : BaseFragment() {
             return titles[position]
         }
 
+        /**
+         *替换指定位置上的Fragment
+         */
+        fun replace(position: Int, newFragment: Fragment) {
+            val transation = fm.beginTransaction()
+            transation.remove(pages[position])
+            pages.removeAt(position)
+            pages.add(position, newFragment)
+            transation.commit()
+            notifyDataSetChanged()
+        }
 
+
+        override fun getItemPosition(`object`: Any): Int {
+            if (`object` is HDWalletDefaultFragment) return POSITION_NONE
+            return POSITION_UNCHANGED
+        }
     }
 
 

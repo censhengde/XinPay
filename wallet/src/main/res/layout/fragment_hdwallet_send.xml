@@ -6,7 +6,6 @@
     android:layout_height="match_parent">
 
 
-
     <include
         android:id="@+id/include2"
         layout="@layout/common_action_bar"
@@ -17,99 +16,148 @@
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:background="@color/pageBackgound"
+        app:layout_constraintBottom_toTopOf="@+id/btn_hdwallet_transation_send_confirm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include2"
-        app:layout_constraintVertical_bias="0.0"
-        android:background="@color/pageBackgound">
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp">
+            android:layout_marginTop="@dimen/dp_1"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/tv_hdwallet_transation_send_balance"
+                style="@style/HDWalletSendFragment_style"
+                android:paddingStart="@dimen/dp_15"
                 android:text="可用余额:000000 BTC"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="67dp" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="地址"
-                style="@style/secondaryTitle"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="104dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/secondaryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_1"
+                    android:background="@color/viewBackgound"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dp_15"
+                    android:text="地址"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="104dp" />
+
+                <ImageView
+                    android:id="@+id/iv_hdwallet_transation_send_address_scan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_40"
+                    android:src="@drawable/resources_img_nav_nav_scan"
+                    android:tint="@color/colorPrimaryDark" />
+            </RelativeLayout>
+
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/et_hdwallet_transation_send_address"
+                style="@style/HDWalletSendFragment_style"
                 android:layout_marginTop="1dp"
-                android:background="@null"
-                android:hint="请输入收币地址"/>
+                android:hint="请输入收币地址"
+                android:paddingStart="@dimen/dp_15"
+                android:textSize="14sp" />
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 style="@style/secondaryTitle"
-                android:text="转账数量"/>
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/viewBackgound"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_15"
+                android:text="转账数量" />
+
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/et_hdwallet_transation_send_amount"
+                style="@style/HDWalletSendFragment_style"
                 android:layout_marginTop="1dp"
-                android:background="@null"
-                android:hint="转账数量"/>
+                android:hint="转账数量"
+                android:inputType="numberDecimal"
+                android:paddingStart="@dimen/dp_15"
+                android:textSize="14sp" />
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 style="@style/secondaryTitle"
-                android:text="备注"/>
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="15dp"
+                android:background="@color/viewBackgound"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_15"
+                android:text="备注" />
+
             <EditText
+                android:id="@+id/et_hdwallet_transation_send_memo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="80dp"
                 android:layout_marginTop="1dp"
-                android:background="@null"
-                android:hint="选填,50字以内"/>
+                android:background="@color/viewBackgound"
+                android:hint="选填,50字以内"
+                android:lines="5"
+                android:paddingStart="@dimen/dp_15"
+                android:textSize="14sp" />
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:id="@+id/tv_hdwallet_transation_send_fee"
                 style="@style/secondaryTitle"
-                android:text="旷工费用"/>
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="15dp"
+                android:background="@color/viewBackgound"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_15"
+                android:text="旷工费用: 0.0000045 BTC ≈ ￥2.48" />
+
             <RadioGroup
+                android:id="@+id/rg_hdwallet_transation_send_fee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <CheckBox
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@color/viewBackgound"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/dp_15">
+
+                <RadioButton
                     android:id="@+id/cb_fee_long_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="慢/n预计60分钟到账"/>
-                <CheckBox
+                    android:text="慢/n预计60分钟到账" />
+
+                <RadioButton
                     android:id="@+id/cb_fee_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
-                    android:text="普通/n预计30分钟到账"/>
-                <CheckBox
+                    android:text="普通/n预计30分钟到账" />
+
+                <RadioButton
                     android:id="@+id/cb_fee_short_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="快/n预计15分钟到账"/>
+                    android:text="快/n预计15分钟到账" />
             </RadioGroup>
         </LinearLayout>
     </ScrollView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_hdwallet_transation_send_confirm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
@@ -120,7 +168,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
